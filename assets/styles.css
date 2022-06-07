@@ -1,0 +1,26 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+header {
+    color: white;
+    background-color: #009900 ;
+    padding: 24px 0 20px 24px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 5em;
+}
+
+header p {
+    font-size: 1.35em;
+}
+
+/* i {
+    height: 100px;
+    width: 100px;
+    color: white;
+} */
