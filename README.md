@@ -1,6 +1,8 @@
 # Lets-Eat
 First group assignment for GT-Bootcamp 
+
 PROJECT DESCRIPTION
+
 Users will be able to answer a questionare based on prefrences of where they would like to eat. This application will pull up restaurant in the area after the user answers said questions that match the users prefrences.
 
 //User story//
