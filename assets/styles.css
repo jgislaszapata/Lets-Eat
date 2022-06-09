@@ -3,9 +3,14 @@
     margin: 0;
 }
 
+body {
+    background-image: url("/assets/images/genericyellowbg.jpg");
+    background-size: cover;
+}
+
 header {
     color: white;
-    background-color: #009900 ;
+    background-color: #008000 ;
     padding: 24px 0 20px 24px;
     width: 100%;
     text-align: left;
@@ -27,3 +32,20 @@ i {
     padding-top: 18px;
     padding-left: 12px;
 }
+
+/* section {
+    width: 100%;
+}
+
+.content-main {
+    width: 75%;
+    margin: 14em auto;
+    padding: 14em;
+    background-color: white;
+}
+
+button {
+    margin: 0 auto;
+    color: white;
+    background-color: #008000;
+} */
