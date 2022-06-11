@@ -4,57 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's Eat!</title>
+    <title>Let's eat!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
     <script src="https://kit.fontawesome.com/34284d0b91.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
-    
-    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header-main">
         <div class="logo-container">
             <h1>Let's Eat!</h1>
-        <i class="fa-solid fa-burger fa-4x"></i>
+            <i class="fa-solid fa-burger fa-6x"></i>
         </div>
         <p>Powered by Yelp Fusion</p>
     </header>
 
+    <section class="blurb">
+        <h3>Craving a bite but can't decide where to eat? </h3>
+        <h3>Let our restaurant picker decide for you!</h3>
+    </section>
 
-    <p>Enter Your location</p>
-    
-    <div id="landingButton">
-        <h3>Choices..</h3>
-        <br>
-        <p>We know its hard to choose where to eat, so we're going to choose for you!</p>
-        <p>Use our questionare to narrow down our options</p>
-        <!--Button leads to questionare-->
-        <button></button>
-    </div>
-    <!--Local storage keeps favorites?-->
-    <div id="SavedList">
-        <p>Saved restaurants</p>
-        <ul>
-            <li>Item Three</li>
-            <li>Item Three</li>
-            <li>Item Three</li>
-        </ul>
-    </div>
-    <!--Back button?-->
-    <!--Next Button?-->
-    <div id="questionare">
-        <h3>Whats our budget?</h3>
+    <section class="location-container">
+        <h3>Step 1: Where would you like to eat?</h3>
+        <input type="text" placeholder="Enter your ZIP code or city" name="location">
+    </section>
+
+    <section class="budget-container">
+        <h3>Step 2: Select your budget.</h3>
         <input type="radio" value="$" name="question1"><span>$</span> 
         <input type="radio" value="$$" name="question1"><span>$$</span>
         <input type="radio" value="$$$" name="question1"><span>$$$</span> 
         <input type="radio" value="$$$$" name="question1"><span>$$$$</span> 
-    </div>
-    <div id="results">
-        <p>Here are the top 3 best options for you!</p>
-        <!--Top results found here-->
-    </div>
-    <script src="./assets/script.js"></script>
+    </section>
+
+    <section class="preference-container">
+        <h3>Step 3: Tell us what you're craving!</h3>
+        <input type="text" placeholder="e.g., Tacos, Italian, Fusion etc.">
+    </section>
+
+    <section class="all-done">
+        <h3>All done! Click the button to see your results!</h3>
+        <button>Let's Eat!</button>
+    </section>
+
+    <section class="result-container">
+        <div>Results will go here</div>
+    </section>
+
+    <footer>
+        <h3>Thanks for using Let's Eat! Hope to see you again soon!</h3>
+    </footer>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>
