@@ -28,31 +28,31 @@
 
             <section class="location-container">
                 <h3>Where would you like to eat?</h3>
-                <input type="text" placeholder="Enter your ZIP code or city" name="location">
+                <input type="text" placeholder="Enter your ZIP code or city" name="location" id="location-input">   
             </section>
 
             <section class="budget-container">
                 <h3>Choose your budget.</h3>
-                <input type="radio" value="$" name="question1"><span>$</span>
-                <input type="radio" value="$$" name="question1"><span>$$</span>
-                <input type="radio" value="$$$" name="question1"><span>$$$</span>
-                <input type="radio" value="$$$$" name="question1"><span>$$$$</span>
+                <input type="radio" value="$" name="question1" id="price-low"><span>$</span>
+                <input type="radio" value="$$" name="question1" id="price-mid"><span>$$</span>
+                <input type="radio" value="$$$" name="question1" id="price-high"><span>$$$</span>
+                <input type="radio" value="$$$$" name="question1" id="price-max"><span>$$$$</span>
             </section>
 
             <section class="preference-container">
                 <h3>Tell us what you're craving!</h3>
-                <input type="text" placeholder="e.g., Tacos, Italian, Fusion etc.">
+                <input type="text" placeholder="e.g., Tacos, Italian, Fusion etc." id="preferences-input">
             </section>
 
             <section class="all-done">
-                <button type="button" id="searchBtn">Let's Eat!</button>
+                <button type="button" id="search-button">Let's Eat!</button>
             </section>
 
         </div>
 
         <div class="col col-md-8">
             <section class="result-container">
-                <div>Results will go here</div>
+                <div id="results-area">Results will go here</div>
             </section>
         </div>
 
