@@ -31,48 +31,32 @@ header p {
     padding-bottom: 12px;
 }
 
-.blurb {
-    margin: 0 auto;
-    width: 60%;
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.blurb h3 {
-    font-size: 2.5em;
-}
-
 .location-container,
 .budget-container,
 .preference-container,
 .all-done,
 .result-container {
     margin: 0 auto;
-    width: 60%;
     text-align: center;
     padding-bottom: 75px;
 }
 
-.location-container h3 {
+.location-container h3,
+.budget-container h3,
+.preference-container h3,
+.all-done h3 {
     margin: 20px auto;
     font-size: 2em;
 }
 
-.location-container input {
-    /* display: inline-block; */
-    width: 40%;
+.location-container input,
+.preference-container input {
     height: 3em;
     text-align: center;
     font-size: 1.5em;
 }
 
-.budget-container h3 {
-    margin: 20px auto;
-    font-size: 2em;
-}
-
 .budget-container input {
-    width: 2%;
     height: 1.25em;
 }
 
@@ -82,28 +66,10 @@ header p {
     padding-right: 12px;
 }
 
-.preference-container h3 {
-    margin: 20px auto;
-    font-size: 2em;
-}
-
-.preference-container input {
-    width: 40%;
-    height: 3em;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.all-done h3 {
-    margin: 20px auto;
-    font-size: 2em;
-}
-
 .all-done button {
     color: white;
     background-color: #009E60;
     height: 3.25em;
-    width: 12%;
     font-size: 1.75em;
     border-radius: 10px;
 }
@@ -124,4 +90,9 @@ footer {
     padding: 24px;
     margin-top: 60px;
     text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
 }
