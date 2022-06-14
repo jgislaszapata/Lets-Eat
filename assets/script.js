@@ -1,6 +1,6 @@
 //get search button element ID
 var generateResults = document.getElementById('search-button');
-
+ 
 var apiKey = "4e9c1647bamsh75f9980fca9fd27p176220jsn6936ac7b1a28"
 //global variable to get ingredient ID
 var ingredientIDs = [];
@@ -76,3 +76,4 @@ async function getReceipeID() {
     })
     .catch(err => console.error(err));
 }
+
