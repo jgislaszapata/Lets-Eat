@@ -25,34 +25,42 @@
     </header>
     <main class="flex-row">
         <div class="col col-md-3">
-
-            <section class="location-container">
-                <h3>Where would you like to eat?</h3>
-                <input type="text" placeholder="Enter your ZIP code or city" name="location" id="location-input">   
-            </section>
-
-            <section class="budget-container">
-                <h3>Choose your budget.</h3>
-                <input type="radio" value="$" name="question1" id="price-low"><span>$</span>
-                <input type="radio" value="$$" name="question1" id="price-mid"><span>$$</span>
-                <input type="radio" value="$$$" name="question1" id="price-high"><span>$$$</span>
-                <input type="radio" value="$$$$" name="question1" id="price-max"><span>$$$$</span>
-            </section>
-
-            <section class="preference-container">
-                <h3>Tell us what you're craving!</h3>
-                <input type="text" placeholder="e.g., Tacos, Italian, Fusion etc." id="preferences-input">
-            </section>
-
-            <section class="all-done">
-                <button type="button" id="search-button">Let's Eat!</button>
-            </section>
+<div class="ingredient_search">
+                <h3>Enter Ingredients:</h3>
+                <input type="text" placeholder="Enter Ingredients seperated by commas" name="location" id="location-input">   
+                <button type="button" class="search" id="search-button">Let's Eat!</button>
+            </div>
 
         </div>
 
         <div class="col col-md-8">
-            <section class="result-container">
-                <div id="results-area">Results will go here</div>
+            <section class="result-container" id="results">
+                <div class="recipe" id="recipe_0">
+                    <p> <span id="title_0"></span></p>
+                    <p>Prep Time: <span id="prepTime_0"></span></p>
+                    <p>Instructions: <span id="instruction_0"></span></p>
+                </div>
+                <div class="recipe" id="recipe_1">
+                    <p> <span id="title_1"></span></p>
+                    <p>Prep Time: <span id="prepTime_1"></span></p>
+                    <p>Instructions: <span id="instruction_1"></span></p>
+                </div>
+                <div class="recipe" id="recipe_2">
+                    <p> <span id="title_2"></span></p>
+                    <p>Prep Time: <span id="prepTime_2"></span></p>
+                    <p>Instructions: <span id="instruction_2"></span></p>
+                </div>
+                <div class="recipe" id="recipe_3">
+                    <p> <span id="title_3"></span></p>
+                    <p>Prep Time: <span id="prepTime_3"></span></p>
+                    <p>Instructions: <span id="instruction_3"></span></p>
+                </div>
+                <div class="recipe" id="recipe_4">
+                    <p> <span id="title_4"></span></p>
+                    <p>Prep Time: <span id="prepTime_4"></span></p>
+                    <p>Instructions: <span id="instruction_4"></span></p>
+                </div>
+                
             </section>
         </div>
 
@@ -61,7 +69,7 @@
     <footer>
         <h3>Thanks for using Let's Eat! Hope to see you again soon!</h3>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
 
