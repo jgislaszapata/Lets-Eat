@@ -5,72 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's eat!</title>
+    <title>Let's eat!</title> <!--Page title entry-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles.css">
-    <script src="https://kit.fontawesome.com/34284d0b91.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Bootstrap CSS link-->
+    <link rel="stylesheet" href="assets/styles.css"> <!--Local vanilla CSS link-->
+    <script src="https://kit.fontawesome.com/34284d0b91.js" crossorigin="anonymous"></script> <!--Font awesome font assets-->
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet"> <!--Google font assets-->
 </head>
 
 <body>
 
+    <!-- Header container for top banner of the page -->
     <header class="header-main">
         <div class="logo-container">
-            <h1>Let's Eat!</h1>
+            <h1>Let's Eat!</h1> <!--Large font text in top banner of site-->
             <i class="fa-solid fa-burger fa-6x"></i>
         </div>
-         <h5>A recipe finder</h5>
-
+        <h5>A Recipe Finder</h5> <!--Small font text in top banner of site-->
     </header>
-    <main class="flex-row">
-        <div class="col col-md-3">
-<div class="ingredient_search">
-                <h3>Enter Ingredients:</h3>
-                <input type="text" placeholder="Enter Ingredients seperated by commas" name="location" id="location-input">   
-                <button type="button" class="search" id="search-button">Let's Eat!</button>
-            </div>
 
+    <!-- Main container for search content and results, found below title banner -->
+    <main class="flex-row">
+        <!-- Class for ingredient search UI element -->
+        <div class="col col-md-3">
+            <!-- Class creating interactable element for entering search text and submitting results -->
+            <div class="ingredient_search">
+                <h3>Search ingredients here!</h3>
+                <input type="text" placeholder="Separate multiple ingredients with commas" name="location" id="location-input">   
+                <button type="button" class="search" id="search-button">Let's Eat!</button> <!--Button text element-->
+            </div>
         </div>
 
+        <!-- Container formatting results into a single column -->
         <div class="col col-md-8">
+            <!-- Container holding all results -->
             <section class="result-container" id="results">
+                <!-- Container for result 0 -->
                 <div class="recipe" id="recipe_0">
                     <p> <span id="title_0"></span></p>
                     <p>Prep Time: <span id="prepTime_0"></span></p>
                     <p>Instructions: <span id="instruction_0"></span></p>
                 </div>
+                <!-- Container for result 1 -->
                 <div class="recipe" id="recipe_1">
                     <p> <span id="title_1"></span></p>
                     <p>Prep Time: <span id="prepTime_1"></span></p>
                     <p>Instructions: <span id="instruction_1"></span></p>
                 </div>
+                <!-- Container for result 2 -->
                 <div class="recipe" id="recipe_2">
                     <p> <span id="title_2"></span></p>
                     <p>Prep Time: <span id="prepTime_2"></span></p>
                     <p>Instructions: <span id="instruction_2"></span></p>
                 </div>
+                <!-- Container for result 3 -->
                 <div class="recipe" id="recipe_3">
                     <p> <span id="title_3"></span></p>
                     <p>Prep Time: <span id="prepTime_3"></span></p>
                     <p>Instructions: <span id="instruction_3"></span></p>
                 </div>
+                <!-- Container for result 4 -->
                 <div class="recipe" id="recipe_4">
                     <p> <span id="title_4"></span></p>
                     <p>Prep Time: <span id="prepTime_4"></span></p>
                     <p>Instructions: <span id="instruction_4"></span></p>
-                </div>
-                
+                </div>    
             </section>
+
         </div>
 
     </main>
     
+    <!-- Container for user message at the bottom of the page below results -->
     <footer>
         <h3>Thanks for using Let's Eat! Hope to see you again soon!</h3>
     </footer>
+    
+    <!-- Link to jQuery 3rd party API -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Link to vanilla Javascript file -->
     <script src="assets/script.js"></script>
+
 </body>
 
 </html>

@@ -1,80 +1,83 @@
 body {
-    color: #5b5b5b;
+    color: #5b5b5b; /* Results text color */
 }
 
 .logo-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    display: flex;  /* Sets logo container (the "header" of the page) to flex layout */
+    justify-content: center;  /* Centers logo image */
+    width: 100%; /* Sets logo container to 100% of the page width (responsive) */
 }
 
 .logo-container i {
-    display: inline;
-    padding-top: 24px;
-    padding-left: 18px;
+    display: inline; /* Sets logo container to inline layout */
+    padding-top: 24px; /* Sets top padding of logo container */
+    padding-left: 18px; /* Sets left padding of logo container */
 }
 
 .header-main {
-    text-align: center;
-    color: white;
-    background-color: #009E60;
-    margin-bottom: 4em;
-    font-family: 'Titan One', cursive;
+    text-align: center; /* Centers text in the header */
+    color: white; /* Sets header text to white */
+    background-color: #009E60; /* Sets header background color to green */
+    margin-bottom: 4em; /* Sets header bottom margin */
+    font-family: 'Titan One', cursive; /* Sets header font type */
 }
 
 .logo-container h1 {
-    font-size: 6.75em;
+    font-size: 6.75em; /* Sets font size for large header text (the page title) */
 }
 
 header p {
-    font-size: 1.75em;
-    padding-bottom: 12px;
+    font-size: 1.75em; /* Sets font side for small header text (the page subtitle) */
+    padding-bottom: 12px; /* Sets padding below subtitle text */
 }
 
 .result-container {
-    height: auto;
-    border: 1px solid grey;
+    height: auto; /* Reactive container height for results */
+    border: 1px solid grey; /* Border width and color for results */
 }
 
 .result-container div {
-    margin: 20px auto;
-    font-size: 1em;
+    margin: 20px auto; /* Sets margin around results */
+    font-size: 1em; /* Sets font size of results */
 }
 
 footer {
-    background-color: #009E60;
-    color: white;
-    padding: 24px;
-    margin-top: 60px;
-    text-align: center;
+    background-color: #009E60; /* Sets footer background color */
+    color: white; /* Sets footer text color */
+    padding: 24px; /* Sets footer padding */
+    margin-top: 60px; /* Sets footer top margin */
+    text-align: center; /* Aligns footer text */
 }
 
 .flex-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Sets row container to fles display type */
+    flex-wrap: wrap; /* Sets row container to wrap content if content exceeds container width */
 }
 
 .ingredient_search {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px; /* Sets top margin of the text search element */
+    margin-bottom: 10px; /* Sets bottom margin of the text search element */
+}
+
+#location-input {
+    width: 100%; /* Set ingredient search bar width to 100% of container width */
 }
 
 .search {
-    width: 100%;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    background-color: green;
-    color: white;
-    border-radius: 4px;
+    width: 100%; /* Sets search element width to 100% of container width */
+    font-size: 1.3rem; /* Sets search element font size */
+    margin-bottom: 10px; /* Sets bottom margin of search element */
+    margin-top: 10px; /* Sets top margin of search element */
+    background-color: green; /* Sets background color of search element */
+    color: white; /* Sets text color of search element */
+    border-radius: 4px; /* Radius of corners for the search element border */
   }
 
   .recipe {
-    
-      margin: solid 1px black;
+      margin: solid 1px black; /* Sets border width and color around recipe results */
   }
 
   .recipe img {
-      width: 200px;
-      height: 200px;
+      width: 200px; /* Sets width size of image results */
+      height: 200px; /* Sets height size of image results */
   }
