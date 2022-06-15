@@ -71,13 +71,27 @@ footer {
     background-color: green; /* Sets background color of search element */
     color: white; /* Sets text color of search element */
     border-radius: 4px; /* Radius of corners for the search element border */
-  }
+}
 
-  .recipe {
-      margin: solid 1px black; /* Sets border width and color around recipe results */
-  }
+.recipe {
+    margin: solid 2px black; /* Sets border width and color around recipe results */
+}
 
-  .recipe img {
-      width: 200px; /* Sets width size of image results */
-      height: 200px; /* Sets height size of image results */
-  }
+.recipe img {
+    padding-left: 20px;
+    width: 200px; /* Sets width size of image results */
+    height: 200px; /* Sets height size of image results */
+}
+
+#title_0, #title_1, #title_2, #title_3, #title_4, #title_5 {
+    font-weight: bolder; /* Sets the boldness of recipe result titles */
+    text-decoration: underline; /* Underlines recipe result titles */
+    font-size: larger; /* Sets font size of recipe result titles */
+    color: #009E60; /* Sets color of recipe result titles */
+}
+
+/* Adds left and right padding to all results to ensure they aren't bumped against the border */
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+}

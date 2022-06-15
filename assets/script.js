@@ -46,9 +46,8 @@ $("#results").show();
   .then(function (data1) {
     console.log("recipe details" ,data1); // Log receipe results to browser console for dev validation
     $("#title_" + i).text(data1.title); // Applies title value from API to the coorresponding (i) HTML element
-    var img = document.createElement("IMG"); // Initialize an image element for the HTML
-    img.src = data1.image; // Image source 
-    $("#recipe_" + i).append(img); // Apply recipe from API to corresponding (i) HTML element
+    const imgEl = document.getElementById("img_"+i); // Create an element iteratively for each result image
+    imgEl.src = data1.image; // Set the iterative image elements to a cooresponding photo
     $("#prepTime_" + i).text(data1.readyInMinutes); // Apply prep time from API to the corresponding (i) HTML element
     $("#instruction_" + i).text(data1.instructions); // Apply instructions from API to the corresponding (i) HTML element
   })
