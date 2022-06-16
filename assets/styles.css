@@ -33,7 +33,6 @@ header p {
 
 .result-container {
     height: auto;
-    border: 1px solid grey;
 }
 
 .result-container div {
@@ -59,8 +58,14 @@ footer {
     margin-bottom: 10px;
 }
 
+#ingredient-input {
+    width: 60%;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
 .search {
-    width: 100%;
+    width: 60%;
     font-size: 1.3rem;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -77,4 +82,19 @@ footer {
   .recipe img {
       width: 200px;
       height: 200px;
+  }
+
+  .recipe {
+      border: 1px solid grey;
+      border-radius: 10px;
+      padding: 16px;
+  }
+
+  .recipe-title {
+      font-size: 2em;
+      font-weight: 600;
+  }
+
+  .prep-time {
+      font-weight: 600;
   }
