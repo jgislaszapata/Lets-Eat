@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's eat!</title>
+    <title>Recipe Finder</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
@@ -19,17 +19,20 @@
     <header class="header-main">
         <div class="logo-container">
             <h1>Recipe Finder!</h1>
-           <i class="material-icons" style="font-size:88px;color:white">search</i>
+            <i class="material-icons" style="font-size:88px;color:white">search</i>
         </div>
     </header>
     <main class="flex-row">
         <div class="col col-md-3">
-<div class="ingredient_search">
+            <div class="ingredient_search">
                 <h3>Enter Ingredients:</h3>
-                <input type="text" placeholder="Enter Ingredients" name="ingredient" id="ingredient-input">   
+                <input type="text" placeholder="Enter Ingredients" name="ingredient" id="ingredient-input">
                 <button type="button" class="search" id="search-button">Get recipe</button>
             </div>
-
+            <div>
+                <h4>Previous Searches</h4>
+                <ul id="previousSearch"></ul>
+            </div>
         </div>
 
         <div class="col col-md-8">
@@ -59,9 +62,9 @@
                     <p class="prep-time">Prep Time: <span id="prepTime_4"></span></p>
                     <p class="prep-time">Instructions: <span id="instruction_4"></span></p>
                 </div>
-                     <footer>
-                        <h3>Thanks for using Recipe Finder! Hope to see you again soon!</h3>
-                     </footer>  
+                <footer>
+                    <h3>Thanks for using Recipe Finder! Hope to see you again soon!</h3>
+                </footer>
             </section>
         </div>
     </main>
