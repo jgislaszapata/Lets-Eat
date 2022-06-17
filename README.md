@@ -25,4 +25,6 @@ Interactive text input and search button.
 [https://jgislaszapata.github.io/Recipe-Finder/](https://jgislaszapata.github.io/Recipe-Finder/)
 
 ![Screenshot (32)](https://user-images.githubusercontent.com/101620112/174156889-8cf5e5ca-741c-4f3b-824c-f501b1e92c6d.png)
+
 ![Screenshot (30)](https://user-images.githubusercontent.com/101620112/174158032-b8440c3a-a36d-4674-b5e0-e52c0a371fee.png)
+
