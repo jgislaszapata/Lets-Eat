@@ -1,6 +1,6 @@
 # Recipe Finder
 
-PROJECT DESCRIPTION
+## PROJECT DESCRIPTION
 
 This recipe finder application helps users find recipes based off of keywords they enter.
 
@@ -13,13 +13,13 @@ Below the input and button field, there is also a "Previous Searches" section wh
 Our application also features a "Go back" button that refreshes the page, as well as a "clear search history" button which removes the previous search values from locall storage. 
 
 
-//USER STORY//
+## USER STORY
 
 AS A hungry user
 I WANT to get Recipe suggestions based on my current ingredients
 SO THAT I can decide what would be the best recipe to make
 
-//ACCEPTANCE CRITERIA// 
+## ACCEPTANCE CRITERIA 
 
 WHEN I enter a food-related keyword
 THEN I am presented with a list of recipes containing that keyword. 
@@ -27,13 +27,13 @@ WHEN the search results are generated,
 THERE should be no more than 5 results given at a time.
 
 
-API's being used:
+## API's being used:
 
 Spoontacular
 JQuery
 Bootstrap
 
-Technologies used:
+## Technologies used:
 
 HTML
 Page format
@@ -48,5 +48,7 @@ Interactive text input and search button.
 ![Screenshot (32)](https://user-images.githubusercontent.com/101620112/174156889-8cf5e5ca-741c-4f3b-824c-f501b1e92c6d.png)
 
 ![Screenshot (30)](https://user-images.githubusercontent.com/101620112/174158032-b8440c3a-a36d-4674-b5e0-e52c0a371fee.png)
+
+[Screenshot](./assets/images/Screen%20Shot%202022-06-17%20at%2013.16.54.png)
 
 
