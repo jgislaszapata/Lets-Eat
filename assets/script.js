@@ -8,7 +8,10 @@ var apiKey = "dbb930ff0emsh649dcb8a3228950p19ae08jsn5b7d964da6d1"
 //global variable to get ingredient ID
 var ingredientIDs = [];
 var savedSearches = [];
-
+//back button function added
+document.querySelector("#back-button").addEventListener("click",()=>{
+  window.location.reload(true);
+} )
 //Event listener is added to search button
 generateResults.addEventListener("click", getRecipe);
 
