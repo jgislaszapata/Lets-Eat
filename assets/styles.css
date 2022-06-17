@@ -87,6 +87,9 @@ footer {
       padding: 16px;
       margin: solid 1px black;
   }
+  section .recipe {
+    background-color: whitesmoke;
+  }
 
   .recipe-title {
       font-size: 2em;
