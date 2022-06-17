@@ -66,8 +66,9 @@ footer {
     margin-bottom: 2px;
 }
 
-.search,
-.clearSearch {
+
+.search, .clearSearch {
+
     width: 60%;
     font-size: 1.3rem;
     margin-bottom: 10px;

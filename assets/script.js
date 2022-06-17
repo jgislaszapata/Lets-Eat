@@ -164,3 +164,9 @@ function addValuePreviousSearch() {
     localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
   }
 }
+
+//clear search button
+document.getElementById("clear-search").onclick = clear_me;
+function clear_me() {
+    localStorage.clear();
+}
