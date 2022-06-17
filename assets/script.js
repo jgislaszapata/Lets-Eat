@@ -143,7 +143,7 @@ $("li").on('click', 'button', function () {
 
 //this function is invoked from getRecipe function to append the current search to previous search history div element
 function appendCurrentSearch() {
-  if (buttonvalue === null) {
+  if (buttonvalue === undefined) {
     var listEl = document.createElement("li");
     var buttonEl = document.createElement("button");
     buttonEl.textContent = $("#ingredient-input").val();
@@ -154,12 +154,12 @@ function appendCurrentSearch() {
 
 //this function is invoked from getRecipeID function to add new search ingredient to local storage
 function addValuePreviousSearch() {
-  if (buttonvalue === null) {
+  if (buttonvalue === undefined) {
     var savedSearches = JSON.parse(localStorage.getItem("savedSearches"));
     if (savedSearches === null) {
       var savedSearches = [];
     }
-    savedSearches.push(ingredientSearch);
+    savedSearches.push($("#ingredient-input").val());
     localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
   }
 }
