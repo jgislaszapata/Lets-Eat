@@ -7,11 +7,16 @@ var previousSearchEl = document.getElementById("previousSearch");
 var apiKey = "dbb930ff0emsh649dcb8a3228950p19ae08jsn5b7d964da6d1"
 //global variable to get ingredient ID
 var ingredientIDs = [];
-var savedSearches = [];
+
+var buttonvalue;
+
+
+
 //back button function added
 document.querySelector("#back-button").addEventListener("click",()=>{
   window.location.reload(true);
 } )
+
 //Event listener is added to search button
 generateResults.addEventListener("click", getRecipe);
 
@@ -19,7 +24,11 @@ generateResults.addEventListener("click", getRecipe);
 //This function inturn calls getrecipeID to get top 5 ingredient ID's for the entered ingredient
 //Ingredient IDs are then passed to getRecipe function to retrive information like Title, Image, PrepTime and Instructions 
 
-// The reason behind two API calls is that API used in getRecipe function requires 
+//API used in getRecipeID function requires ingredient as required parameter and returns ingredient ID, this is passed to API in getRecipe function
+//API used in getRecipe function requires ingredient ID as required parameter
+
+//---------------------------Start of getRecipe function --------------------------------------------
+
 async function getRecipe() {
 
   await getReceipeID();
@@ -34,6 +43,7 @@ async function getRecipe() {
   };
 
   $("img").remove();
+
   for (var i = 0; i < 5; i++) {
     await fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/' + ingredientIDs[i] + '/information', options)
       .then(function (res) {
@@ -51,22 +61,24 @@ async function getRecipe() {
         $("#instruction_" + i).text(data1.instructions);
 
       })
-
       .catch(err => console.error(err));
-
   }
+
   $("#results").show();
 
   //apends current search to previous searches
-  var listEl = document.createElement("li");
-  listEl.textContent = $("#ingredient-input").val();
-  previousSearchEl.appendChild(listEl);
+  appendCurrentSearch();
 
   //clear the input field & prepare for next input
   $("#ingredient-input").val("");
 }
 
+//------------------------------------end of getRecipe function-----------------------------------------------
+
+//------------------------------------start of getrecipeID function ------------------------------------------
+
 //This API call converts the user entered ingredient and fetchs corresponding ID
+
 async function getReceipeID() {
   const options = {
     method: 'GET',
@@ -79,9 +91,7 @@ async function getReceipeID() {
   var ingredientSearch = $("#ingredient-input").val();
 
   //add new input to saved Searches array & set key,value in local storage
-  savedSearches.push(ingredientSearch);
-  localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
-
+  addValuePreviousSearch();
 
   await fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients?ingredients=' + ingredientSearch, options)
     .then(function (response) {
@@ -99,7 +109,9 @@ async function getReceipeID() {
     .catch(err => console.error(err));
 }
 
-//this function gets auto invoked when page loads
+//--------------------------------end of getRecipeID fucntion--------------------------------------------------
+
+//this function gets auto invoked when page loads to check and display if there are any value stored in local storage
 init();
 
 function init() {
@@ -114,7 +126,40 @@ function displayPrevSearchHistory(storedSearches) {
   for (var i = 0; i < storedSearches.length; i++) {
     var savedDetails = storedSearches[i];
     var listEl = document.createElement("li");
-    listEl.textContent = savedDetails;
+    var buttonEl = document.createElement("button");
+    buttonEl.textContent = savedDetails;
     previousSearchEl.appendChild(listEl);
+    listEl.appendChild(buttonEl);
+  }
+}
+
+// this is invoked when a button inside li is clicked (previous search)
+$("li").on('click', 'button', function () {
+  buttonvalue = this.textContent;
+  $('#ingredient-input').val(buttonvalue);
+  console.log(buttonvalue);
+  getRecipe();
+})
+
+//this function is invoked from getRecipe function to append the current search to previous search history div element
+function appendCurrentSearch() {
+  if (buttonvalue === null) {
+    var listEl = document.createElement("li");
+    var buttonEl = document.createElement("button");
+    buttonEl.textContent = $("#ingredient-input").val();
+    previousSearchEl.appendChild(listEl);
+    listEl.appendChild(buttonEl);
+  }
+}
+
+//this function is invoked from getRecipeID function to add new search ingredient to local storage
+function addValuePreviousSearch() {
+  if (buttonvalue === null) {
+    var savedSearches = JSON.parse(localStorage.getItem("savedSearches"));
+    if (savedSearches === null) {
+      var savedSearches = [];
+    }
+    savedSearches.push(ingredientSearch);
+    localStorage.setItem("savedSearches", JSON.stringify(savedSearches));
   }
 }
