@@ -71,6 +71,7 @@ async function getRecipe() {
 
   //clear the input field & prepare for next input
   $("#ingredient-input").val("");
+  buttonvalue = undefined;
 }
 
 //------------------------------------end of getRecipe function-----------------------------------------------
