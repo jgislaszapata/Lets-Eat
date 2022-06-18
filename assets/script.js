@@ -10,12 +10,10 @@ var ingredientIDs = [];
 
 var buttonvalue;
 
-
-
 //back button function added
-document.querySelector("#back-button").addEventListener("click",()=>{
+document.querySelector("#back-button").addEventListener("click", () => {
   window.location.reload(true);
-} )
+})
 
 //Event listener is added to search button
 generateResults.addEventListener("click", getRecipe);
@@ -134,15 +132,19 @@ function displayPrevSearchHistory(storedSearches) {
   }
 }
 
-// this is invoked when a button inside li is clicked (previous search)
-$("li").on('click', 'button', function () {
-  buttonvalue = this.textContent;
-  $('#ingredient-input').val(buttonvalue);
-  console.log(buttonvalue);
-  getRecipe();
-})
+// clears any existing event listener and add event listener to previous search button
+function addEventPrevSeachBtn() {
+  $("li").off('click', 'button');
+  $("li").on('click', 'button', function () {
+    buttonvalue = this.textContent;
+    $('#ingredient-input').val(buttonvalue);
+    console.log(buttonvalue);
+    getRecipe();
+  })
+}
 
 //this function is invoked from getRecipe function to append the current search to previous search history div element
+//and attaches event listener
 function appendCurrentSearch() {
   if (buttonvalue === undefined) {
     var listEl = document.createElement("li");
@@ -150,6 +152,7 @@ function appendCurrentSearch() {
     buttonEl.textContent = $("#ingredient-input").val();
     previousSearchEl.appendChild(listEl);
     listEl.appendChild(buttonEl);
+    addEventPrevSeachBtn();
   }
 }
 
@@ -168,5 +171,5 @@ function addValuePreviousSearch() {
 //clear search button
 document.getElementById("clear-search").onclick = clear_me;
 function clear_me() {
-    localStorage.clear();
+  localStorage.clear();
 }
